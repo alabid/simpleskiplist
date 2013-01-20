@@ -39,7 +39,7 @@ Skip List Algoritms
 Skip list operations are analogous to that of a binary
 tree. They include: **search**, **insert**,
 and **delete**. Note that skip lists are easily
-extendable to support operations like ``find the minimum key'' or ``find the next key''.
+extendable to support operations like "find the minimum key" or "find the next key".
 
 Initialization
 --------------
