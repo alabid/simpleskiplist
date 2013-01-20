@@ -27,18 +27,18 @@ data structure. A *level i* node has *i* forward
 pointers, indexed 1 through *i*. There is no need
 to store the level of a node in the node. Levels
 are capped at some appropriate constant *MaxLevel*.
-The $level of a list$ is the maximum level currently
-in the list (or 1 if the list if empty). The $header$
+The *level of a list* is the maximum level currently
+in the list (or 1 if the list if empty). The *header*
 of a list has forward pointers at levels one through
-$MaxLevel$. The forward pointers of the header at
+*MaxLevel*. The forward pointers of the header at
 levels higher than the current maximum level of the
 list point to NIL.
 
 Skip List Algoritms
 -------------------
 Skip list operations are analogous to that of a binary
-tree. They include: \textbf{search}, \textbf{insert},
-and \textbf{delete}. Note that skip lists are easily
+tree. They include: **search**, **insert**,
+and **delete**. Note that skip lists are easily
 extendable to support operations like ``find the minimum key'' or ``find the next key''.
 
 Initialization
@@ -62,22 +62,22 @@ it is in the list).
 
 At what level should the search be started? William's
 analysis suggests that ideally we should start
-at level $L$ where we expect $log_{1/p}n$ where
-$n$ is the number of elements in the list and
-$p$ is the fraction of nodes in level $i$ that
-also have level $i+1$ pointers. Starting a search
+at level *L* where we expect *log_{1/p}n* where
+*n* is the number of elements in the list and
+*p* is the fraction of nodes in level *i* that
+also have level *i+1* pointers. Starting a search
 at the maximum level in the list does not add more
 than a small constant to the expected search time.
 
 Insertion and Deletion Algorithm
 --------------------------------
 To insert or delete a node, we simply search and
-splice. A vector $update$ is maintained so that when
-the search is complete, $update[i]$ contains a pointer
-to the rightmost node of level $i$. The new node
+splice. A vector *update* is maintained so that when
+the search is complete, *update[i]* contains a pointer
+to the rightmost node of level *i*. The new node
 is of a random level.
 If the insertion generates a node with a greater level
-than the previous maximum, both $Maxlevel$ 
+than the previous maximum, both *Maxlevel* 
 and the appropriate portions of the update vector
 are updated. After each deletion, we check if we have
 deleted the maximum element of the list and if so,
@@ -85,13 +85,13 @@ decrease the maximum level of the list.
 
 Determining MaxLevel
 --------------------
-Since we can safely cap levels at $L(n)$, we should
-choose $MaxLevel = L(N)$ where $N$ is an upper bound
-on the number of elements in a skip list. If $p = 1/2$,
-using $MaxLevel = 16$ is appropriate for skip lists
-containing containing up to $2^{16}$.
+Since we can safely cap levels at *L(n)*, we should
+choose *MaxLevel = L(N)* where *N* is an upper bound
+on the number of elements in a skip list. If *p = 1/2*,
+using *MaxLevel = 16* is appropriate for skip lists
+containing containing up to *2^{16}*.
 
 References
 ------------------------
-**Skip Lists: A Probabilistic Alternative to Balanced
-Trees** by William Pugh
+*Skip Lists: A Probabilistic Alternative to Balanced
+Trees* by William Pugh
