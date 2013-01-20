@@ -1,4 +1,4 @@
-simpleskiplist
+SimpleSkiplist
 ==============
 
 An implementation of a skip list for my Probabilistic Data Structures class.
@@ -35,7 +35,7 @@ levels higher than the current maximum level of the
 list point to NIL.
 
 Skip List Algoritms
--------------------
+===================
 Skip list operations are analogous to that of a binary
 tree. They include: **search**, **insert**,
 and **delete**. Note that skip lists are easily
@@ -91,7 +91,6 @@ on the number of elements in a skip list. If *p = 1/2*,
 using *MaxLevel = 16* is appropriate for skip lists
 containing containing up to *2^{16}*.
 
-References
-------------------------
+**References**
 *Skip Lists: A Probabilistic Alternative to Balanced
 Trees* by William Pugh
