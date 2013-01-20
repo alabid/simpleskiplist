@@ -23,10 +23,10 @@ Skip List Structure
 Each element is represented by a node, the level of 
 which is chosen randoml when the node is inserted
 without regard for the number of elements in the
-data structure. A $level i$ node has $i$ forward
-pointers, indexed 1 through $i$. There is no need
+data structure. A *level i* node has *i* forward
+pointers, indexed 1 through *i*. There is no need
 to store the level of a node in the node. Levels
-are capped at some appropriate constant $MaxLevel$.
+are capped at some appropriate constant *MaxLevel*.
 The $level of a list$ is the maximum level currently
 in the list (or 1 if the list if empty). The $header$
 of a list has forward pointers at levels one through
