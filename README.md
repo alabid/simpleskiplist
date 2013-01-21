@@ -1,7 +1,10 @@
+
+
 SimpleSkiplist
 ==============
 
-An implementation of a skip list for my Probabilistic Data Structures class.
+An implementation of a skip list in python for my
+ "Probabilistic Data Structures" class.
 
 Intro
 -----
@@ -90,6 +93,17 @@ choose *MaxLevel = L(N)* where *N* is an upper bound
 on the number of elements in a skip list. If *p = 1/2*,
 using *MaxLevel = 16* is appropriate for skip lists
 containing containing up to *2^{16}*.
+
+Random Levels
+-------------
+*random_level* is a function used to create a new node
+with a random level between 0 and *MAX_LEVEL*. A
+probability distribution where half of the nodes
+that have level *i* pointers also have level 
+*i+1* pointers is used. This gives us a
+50% chance of the *random_level* function returning
+0, a 25% chance of returning 1, a 12.5% chance
+of returning 2 and so on.
 
 **References**
 *Skip Lists: A Probabilistic Alternative to Balanced
