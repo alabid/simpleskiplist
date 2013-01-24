@@ -1,9 +1,0 @@
-"""
-SkipListTests:
-contains skip lists tests
-"""
-class SkipListTests
-
-
-if __name__ == "__main__":
-    SkipListTests().run()
